@@ -1,20 +1,24 @@
 export interface TaskInputProps {
-    onSubmit: (task: string) => void;
-    disabled: boolean;
+    onTaskSubmit: (task: string) => void;
 }
 
 export interface TimerProps {
+    workDuration: number;
+    breakDuration: number;
+    onSessionComplete: () => void;
+}
+
+export interface TimerState {
     timeLeft: number;
-    setTimeLeft: React.Dispatch<React.SetStateAction<number>>;
     isRunning: boolean;
-    setIsRunning: (isRunning: boolean) => void;
-    onComplete: () => void;
+    isBreak: boolean;
+    sessionsCompleted: number;
 }
 
 export interface AppState {
     currentTask: string;
-    isRunning: boolean;
-    timeLeft: number;
     sessionCount: number;
     isBreak: boolean;
 }
+
+export type TimerMode = 'work' | 'break';
