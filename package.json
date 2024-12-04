@@ -1,0 +1,46 @@
+{
+  "name": "pomodoro-timer",
+  "version": "1.0.0",
+  "description": "A Pomodoro Timer application built with Electron, React, and TypeScript",
+  "private": true,
+  "main": "dist/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "tsc && webpack",
+    "watch": "webpack --watch",
+    "dev": "npm run build && npm start",
+    "tsc": "tsc",
+    "tsc:watch": "tsc --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "pomodoro",
+    "timer",
+    "electron",
+    "react",
+    "typescript"
+  ],
+  "author": "",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-react": "^7.26.3",
+    "babel-loader": "^9.2.1",
+    "css-loader": "^7.1.2",
+    "electron-builder": "^25.1.8",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.97.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.26.0",
+    "@types/electron": "^1.6.12",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "electron": "^33.2.1",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.7.2"
+  }
+}
